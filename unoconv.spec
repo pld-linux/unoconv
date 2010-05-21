@@ -9,6 +9,7 @@ Source0:	http://dag.wieers.com/home-made/unoconv/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-ooopath.patch
 URL:		http://dag.wieers.com/home-made/unoconv/
 BuildRequires:	python >= 2.0
+BuildRequires:	rpm-pythonprov
 Requires:	openoffice.org-pyuno
 Requires:	python >= 2.0
 BuildArch:	noarch
