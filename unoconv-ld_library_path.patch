@@ -1,0 +1,11 @@
+--- unoconv-0.4/unoconv~	2010-10-20 12:56:26.000000000 +0300
++++ unoconv-0.4/unoconv	2010-10-23 13:46:42.987483669 +0300
+@@ -64,7 +64,7 @@
+             sys.path.append(oolibpath)
+             import uno, unohelper
+             ### Export an environment that OpenOffice is pleased to work with
+-            os.environ['LD_LIBRARY_PATH'] = oolibpath + os.pathsep + os.environ['LD_LIBRARY_PATH']
++            os.environ['LD_LIBRARY_PATH'] = oolibpath + os.pathsep
+             break
+         except ImportError, e:
+             sys.path.remove(oolibpath)

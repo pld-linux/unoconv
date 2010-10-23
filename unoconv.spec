@@ -6,6 +6,7 @@ License:	GPL
 Group:		Base
 Source0:	http://dag.wieers.com/home-made/unoconv/%{name}-%{version}.tar.bz2
 # Source0-md5:	64cd2c3b0823d329890c0bedffdfa6ae
+Patch1:		%{name}-ld_library_path.patch
 URL:		http://dag.wieers.com/home-made/unoconv/
 BuildRequires:	python >= 2.0
 BuildRequires:	rpm-pythonprov
@@ -28,6 +29,7 @@ PNG, JPG, SVG, BMP, EPS and many more...
 
 %prep
 %setup -q
+%patch1 -p1
 
 %build
 
