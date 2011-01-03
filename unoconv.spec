@@ -10,7 +10,7 @@ Patch1:		%{name}-ld_library_path.patch
 URL:		http://dag.wieers.com/home-made/unoconv/
 BuildRequires:	python >= 2.0
 BuildRequires:	rpm-pythonprov
-Requires:	openoffice.org-pyuno
+Requires:	pyuno
 Requires:	python >= 2.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
