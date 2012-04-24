@@ -1,13 +1,11 @@
 Summary:	Tool to convert between any document format supported by OpenOffice
 Name:		unoconv
-Version:	0.4
-Release:	2
+Version:	0.5
+Release:	1
 License:	GPL
-Group:		Base
+Group:		Applications
 Source0:	http://dag.wieers.com/home-made/unoconv/%{name}-%{version}.tar.bz2
-# Source0-md5:	64cd2c3b0823d329890c0bedffdfa6ae
-Patch1:		%{name}-ld_library_path.patch
-Patch2:		%{name}-libreoffice.patch
+# Source0-md5:	09a02fe3d258dd332826569026f84d6f
 URL:		http://dag.wieers.com/home-made/unoconv/
 BuildRequires:	python >= 2.0
 BuildRequires:	rpm-pythonprov
@@ -30,8 +28,6 @@ PNG, JPG, SVG, BMP, EPS and many more...
 
 %prep
 %setup -q
-%patch1 -p1
-%patch2 -p0
 
 %build
 
@@ -46,6 +42,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc AUTHORS ChangeLog README.asciidoc WISHLIST docs/*.txt
 %attr(755,root,root) %{_bindir}/unoconv
-%doc AUTHORS ChangeLog COPYING README TODO WISHLIST docs/ tests/
 %{_mandir}/man1/unoconv.1*
