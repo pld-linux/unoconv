@@ -6,8 +6,9 @@ License:	GPL
 Group:		Applications
 Source0:	http://dag.wieers.com/home-made/unoconv/%{name}-%{version}.tar.gz
 # Source0-md5:	eeda0d358ce4bacd5dd84303012c416d
+Patch0:		%{name}-debian.patch
 URL:		http://dag.wieers.com/home-made/unoconv/
-BuildRequires:	python >= 2.0
+BuildRequires:	python3 >= 3.0
 BuildRequires:	rpm-pythonprov
 Requires:	pyuno
 Requires:	python >= 2.0
@@ -28,6 +29,7 @@ PNG, JPG, SVG, BMP, EPS and many more...
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 
