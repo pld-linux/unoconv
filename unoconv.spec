@@ -29,7 +29,7 @@ PNG, JPG, SVG, BMP, EPS and many more...
 
 %prep
 %setup -q
-%patch0 -p0
+%patch -P0 -p0
 
 %build
 
